@@ -1,5 +1,5 @@
 ## Overview
-Application made following the official (djangoproject tutorial)[https://docs.djangoproject.com/en/5.1/intro/tutorial01/]
+Application made following the official [djangoproject tutorial](https://docs.djangoproject.com/en/5.1/intro/tutorial01/)
 
 ## Set Up
 
