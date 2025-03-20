@@ -28,3 +28,14 @@ To run the development server, run the following command in the projects root di
 ### Creating a new python package
 To create a new django package, run the following command in the projects root directory (where manage.py is located) while the virtual environment is activated:
 `python manage.py startapp new_package_name`
+
+### Creating the initial database tables
+When first runnign the project, you will need to set up the initial database tables. The following command will create the tables based off the installed applications configured in 'mysite/settings.py':
+`python manage.py migrate`
+
+#### Verifying table creation
+Open terminal and navigate to the folder that contains the db.sqlite3 file. Enter `sqlite3 db.slite3` to open a SQLite shell. Once the shell is open, enter `.tables` to see the tables listed.
+
+#### Adding a new table or updating model
+Run `python manage.py makemigrations app_name` to generate new tables based off of the new package's config. You will also need to have the app/package listed in installedApps in the settings.py file before running the command. See oplls.apps.pollsConfig as an example.
+If you need to update your apps model at any time run `python manage.py makemigrations` to 'migrate' your app to the new table/database schema. After running the migrations command run `python manage.py migrate` to apply those changes to the database.
